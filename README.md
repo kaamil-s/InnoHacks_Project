@@ -1,4 +1,10 @@
 # InnoHacks_Project
+## Team - HexaDecimals
+- Ayush Srivastava
+- Kaamil Savla
+- Naresh Kumar
+- Saumya Srivastava
+  
 # Language Translator
 This is a simple Node.js backend application for translating text using the Google Cloud Translation API.
 
@@ -41,3 +47,6 @@ Follow the instructions below to set up and run the project locally.
 - Review the Google Cloud Translation API documentation for more information on usage and pricing: Google Cloud Translation API Documentation
 - This is a basic example intended for demonstration purposes. Additional features and error handling may be needed for production use.
 
+  
+
+![Screen Shot 2024-03-07 at 9 59 00 AM](https://github.com/kaamil-s/InnoHacks_Project/assets/128225558/bf7480de-632b-4745-a960-b665de3b3914)
