@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff0073, #a41bda);
+            animation: gradientAnimation 15s infinite alternate;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+    <!-- Link to particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particle animation container -->
+    <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+    <!-- Centered container -->
+    <div class="container mx-auto max-w-lg p-8 bg-blue-200 bg-opacity-50 shadow-lg rounded-md mt-4 relative z-10">
+        <!-- Header -->
+        <header class="text-center py-8 bg-white-200 text-black-500">
+            <h1 class="text-4xl font-bold">Language Translator</h1>
+        </header>
+
+
+        <!-- Form Elements -->
+        <div class="mb-6">
+            <label for="inputText" class="font-bold block text-gray-700">Input Text:</label>
+            <textarea id="inputText" class="w-full border rounded-md p-2 focus:outline-none focus:border-blue-500 transition duration-500"></textarea>
+        </div>
+        <div class="mb-6">
+            <label for="inputLink" class="font-bold block text-gray-700">Input Link:</label>
+            <textarea id="inputLink" class="w-full border rounded-md p-2 focus:outline-none focus:border-blue-500 transition duration-500"></textarea>
+        </div>
+        <!-- Target Language Dropdown -->
+        <div class="mb-6">
+            <label for="targetLanguage" class="font-bold block text-gray-700">Target Language:</label>
+            <select id="targetLanguage" class="w-full border rounded-md p-2 focus:outline-none focus:border-blue-500 transition duration-500">
+                <option value="en">Hindi</option>
+                <option value="es">Tamil</option>
+                <option value="fr">Gujrati</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="flex justify-center items-center">
+            <button id="translateButton" class="bg-pink-500 text-white px-8 py-2 rounded-md hover:bg-pink-700 transition duration-300">Translate</button>
+        </div>
+        <div class="mt-6">
+            <label for="translatedText" class="font-bold block text-gray-700">Translated Text:</label>
+            <textarea id="translatedText" class="w-full border rounded-md p-2 focus:outline-none" readonly></textarea>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer flex justify-center items-center bg-gray-800 text-white py-2 pt-2 pb-2">
+            <p class="text-sm">Made by Team Hexadecimal.</p>
+        </div>
+    </div>
+
+    <!-- Particle animation script -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 },
+                    image: { src: "img/github.svg", width: 100, height: 100 }
+                },
+                opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
